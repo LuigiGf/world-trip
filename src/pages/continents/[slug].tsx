@@ -1,6 +1,6 @@
 import { Flex, Text, Container } from "@chakra-ui/react";
 import { useMemo } from "react";
-import { Banner } from "../../components/Continents";
+import { Banner, CityCard } from "../../components/Continents";
 import Header from "../../components/Header";
 
 interface itemProps {
@@ -61,6 +61,10 @@ export default function Continent() {
             </Flex>
           ))}
         </Flex>
+      </Container>
+      <Container mb="10">
+        <Text>Cidades +100</Text>
+        <CityCard />
       </Container>
     </>
   );
