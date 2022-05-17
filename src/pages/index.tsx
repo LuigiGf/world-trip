@@ -1,8 +1,21 @@
-import { Divider, Grid, GridItem, Img } from "@chakra-ui/react";
+// React Imports
 import { useMemo } from "react";
+//Icons
 import { Cup, Beach, Globe, Modern, Museum } from "../../public/Icons";
+
+//Components
 import Benefit from "../components/Benefit";
 import Header from "../components/Header";
+
+//External Libs
+import { Container, Divider, Grid, GridItem, Img } from "@chakra-ui/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
+
+// Styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function Home() {
   const benefitItems = useMemo(
@@ -57,6 +70,25 @@ export default function Home() {
         borderColor="black"
         borderBottomWidth="3px"
       />
+      <Container maxW="7xl" mb="10">
+        <Swiper
+          navigation={true}
+          pagination={true}
+          modules={[Navigation, Pagination]}
+        >
+          <SwiperSlide>
+            <Img src="Continent.png" />
+          </SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>Slide 5</SwiperSlide>
+          <SwiperSlide>Slide 6</SwiperSlide>
+          <SwiperSlide>Slide 7</SwiperSlide>
+          <SwiperSlide>Slide 8</SwiperSlide>
+          <SwiperSlide>Slide 9</SwiperSlide>
+        </Swiper>
+      </Container>
     </>
   );
 }
