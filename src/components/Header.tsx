@@ -1,6 +1,10 @@
 import { Container, Flex, Img } from "@chakra-ui/react";
 
-export default function Header() {
+interface HeaderProps {
+  isContinent?: boolean;
+}
+
+export default function Header({ isContinent = false }) {
   return (
     <Container maxW="7xl" mx="auto">
       <Flex justify="center" my="7">
@@ -8,7 +12,7 @@ export default function Header() {
           objectFit="contain"
           width={187}
           height={45}
-          src="./Logo.png"
+          src="/Logo.png"
           alt="Logo"
         />
       </Flex>

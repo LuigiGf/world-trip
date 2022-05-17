@@ -14,7 +14,9 @@ export default function ContinentCard({
   return (
     <>
       <Flex
-        objectFit="cover"
+        bgSize="cover"
+        bgRepeat="no-repeat"
+        bgPosition="center"
         w="full"
         bgImage={bgImage}
         justifyItems="center"
