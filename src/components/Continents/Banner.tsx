@@ -16,7 +16,7 @@ export function Banner({ bgImage, title }: BannerProps) {
       bgImage={bgImage}
       alignItems="end"
     >
-      <Container>
+      <Container maxW="7xl">
         <Text mb="16" fontSize="4xl" fontWeight="semibold" textColor="gray.200">
           {title}
         </Text>
