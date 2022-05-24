@@ -1,9 +1,27 @@
 import { Flex, Img, Text } from "@chakra-ui/react";
 
-export function CityCard() {
+interface CityCardProps {
+  city: string;
+  country: string;
+  countryImage: string;
+  countryFlag: string;
+}
+
+export function CityCard({
+  city,
+  country,
+  countryFlag,
+  countryImage,
+}: CityCardProps) {
   return (
-    <Flex flexDirection="column" w={256} height={280} roundedTop="2xl">
-      <Img src="/Londre.png" width={256} height={173} />
+    <Flex
+      key={city}
+      flexDirection="column"
+      w={256}
+      height={280}
+      roundedTop="2xl"
+    >
+      <Img src={countryImage} width={256} height={173} />
       <Flex
         border="2px"
         borderTop="none"
@@ -21,7 +39,7 @@ export function CityCard() {
             textColor="gray.500"
             fontFamily="Barlow"
           >
-            Londres
+            {city}
           </Text>
           <Text
             fontFamily="Barlow"
@@ -29,10 +47,10 @@ export function CityCard() {
             fontWeight="medium"
             textColor="gray.400"
           >
-            Reino Unido
+            {country}
           </Text>
         </Flex>
-        <Img src="/ReinoUnido.png" w={30} h={30} />
+        <Img src={countryFlag} w={30} h={30} />
       </Flex>
     </Flex>
   );

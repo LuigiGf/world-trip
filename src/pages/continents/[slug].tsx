@@ -1,4 +1,4 @@
-import { Flex, Text, Container } from "@chakra-ui/react";
+import { Flex, Text, Container, Grid, GridItem } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { Banner, CityCard } from "../../components/Continents";
 import Header from "../../components/Header";
@@ -62,9 +62,59 @@ export default function Continent() {
           ))}
         </Flex>
       </Container>
-      <Container mb="10">
+      <Container maxW="7xl" mb="10">
         <Text>Cidades +100</Text>
-        <CityCard />
+
+        <Grid gap="16" templateColumns="repeat(4, 1fr)">
+          <GridItem>
+            <CityCard
+              city="Londres"
+              country="Reino Unido"
+              countryImage="/Londre.png"
+              countryFlag="/ReinoUnido.png"
+            />
+          </GridItem>
+          <GridItem>
+            <CityCard
+              city="Londres"
+              country="Reino Unido"
+              countryImage="/Londre.png"
+              countryFlag="/ReinoUnido.png"
+            />
+          </GridItem>
+          <GridItem>
+            <CityCard
+              city="Londres"
+              country="Reino Unido"
+              countryImage="/Londre.png"
+              countryFlag="/ReinoUnido.png"
+            />
+          </GridItem>
+          <GridItem>
+            <CityCard
+              city="Londres"
+              country="Reino Unido"
+              countryImage="/Londre.png"
+              countryFlag="/ReinoUnido.png"
+            />
+          </GridItem>
+          <GridItem>
+            <CityCard
+              city="Londres"
+              country="Reino Unido"
+              countryImage="/Londre.png"
+              countryFlag="/ReinoUnido.png"
+            />
+          </GridItem>
+          <GridItem>
+            <CityCard
+              city="Londres"
+              country="Reino Unido"
+              countryImage="/Londre.png"
+              countryFlag="/ReinoUnido.png"
+            />
+          </GridItem>
+        </Grid>
       </Container>
     </>
   );
